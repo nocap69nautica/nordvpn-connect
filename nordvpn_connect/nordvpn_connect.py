@@ -190,7 +190,8 @@ def check_old_ip():
 
 
 def get_current_ip():
-    new_ip = requests.get('https://api.myip.com/').json()['ip']
+    r = requests.get('https://ident.me/')
+    new_ip=r.text
     return new_ip
 
 
